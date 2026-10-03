@@ -1,0 +1,89 @@
+#REGISTER
+
+###
+POST http://127.0.0.1:8000/api/register/
+Content-Type: application/json
+
+{
+    "username":"anu",
+    "password":"password",
+    "phone":"9562209961"
+}
+
+#LOGIN
+
+
+###
+POST http://127.0.0.1:8000/api/login/
+Content-Type: application/json
+
+{
+    "username":"anu",
+    "password":"password"
+}
+
+#60b8c7c38610ff05abdc66bc11333b239738a237
+
+#LOGOUT
+###
+POST http://127.0.0.1:8000/api/logout/
+Content-Type: application/json
+Authorization: TOKEN c6cf96816d361b8f4fc07301952b46024674d349
+
+
+#TCIKET LIST
+
+###
+GET http://127.0.0.1:8000/api/tickets/
+Accept: application/json
+Authorization: TOKEN 60b8c7c38610ff05abdc66bc11333b239738a237
+
+###
+POST http://127.0.0.1:8000/api/tickets/
+Content-Type: application/json
+Authorization: TOKEN 60b8c7c38610ff05abdc66bc11333b239738a237
+
+{
+    "title": "Password Updation failed",
+    "description":"updating password is facing difficult",
+    "priority": "high",
+    "status": "resolved"
+}
+
+###
+POST http://127.0.0.1:8000/api/tickets/
+Content-Type: application/json
+Authorization: TOKEN 60b8c7c38610ff05abdc66bc11333b239738a237
+
+
+#RETRIEVE
+###
+GET http://127.0.0.1:8000/api/tickets/1/
+Content-Type: application/json
+Authorization: TOKEN 60b8c7c38610ff05abdc66bc11333b239738a237
+
+#UPDATE
+###
+PATCH http://127.0.0.1:8000/api/tickets/1/
+Content-Type: application/json
+Authorization: TOKEN 60b8c7c38610ff05abdc66bc11333b239738a237
+
+{
+   "description":"Login Failed,Server Error"
+}
+
+
+#DELETE
+
+###
+DELETE http://127.0.0.1:8000/api/tickets/1/
+Content-Type: application/json
+Authorization: TOKEN 60b8c7c38610ff05abdc66bc11333b239738a237
+
+
+
+###
+GET http://127.0.0.1:8000/api/summury/
+Accept: application/json
+Authorization: TOKEN 60b8c7c38610ff05abdc66bc11333b239738a237
+
